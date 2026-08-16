@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Madihaa 🌙</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#050817;color:#fff;min-height:100vh;overflow:hidden}
+#stars{position:fixed;inset:0;z-index:0}
+.star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;animation:twinkle 2s infinite alternate}
+@keyframes twinkle{from{opacity:.2;transform:scale(.7)}to{opacity:1;transform:scale(1.4)}}
+.screen{position:relative;z-index:2;min-height:100vh;display:none;align-items:center;justify-content:center;padding:22px;text-align:center}
+.screen.active{display:flex;animation:fade .8s ease}
+@keyframes fade{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.card{width:min(520px,95vw);max-height:92vh;overflow:auto;padding:34px 24px;border-radius:28px;background:rgba(12,18,40,.88);border:1px solid rgba(255,255,255,.14);box-shadow:0 0 50px rgba(100,120,255,.12);backdrop-filter:blur(12px)}
+.moon{width:100px;height:100px;border-radius:50%;background:#f8f3c8;box-shadow:0 0 45px rgba(255,245,180,.7);margin:0 auto 28px;position:relative}
+.moon:after{content:"";position:absolute;width:100px;height:100px;border-radius:50%;background:#080b1c;left:28px;top:-12px}
+.small{color:#b9c1d9;font-size:15px;line-height:1.7}
+h1{font-size:38px;margin:15px 0;background:linear-gradient(90deg,#fff,#d9c9ff,#fff);-webkit-background-clip:text;color:transparent}
+h2{font-size:27px;margin-bottom:20px}
+p{line-height:1.8;color:#e6e8f0;font-size:16px}
+.name{font-size:45px;color:#f5d98b;margin:10px 0 20px}
+button{margin-top:28px;padding:14px 28px;border:0;border-radius:30px;background:linear-gradient(135deg,#d9b85f,#f6e4a4);color:#101322;font-size:16px;font-weight:bold;cursor:pointer}
+button:active{transform:scale(.97)}
+.candle{font-size:60px;margin:10px}
+.heart{font-size:50px;animation:pulse 1.4s infinite;margin-bottom:15px}
+@keyframes pulse{50%{transform:scale(1.15)}}
+.chart{margin:25px auto;width:100%;height:150px;position:relative;border-left:1px solid #65708d;border-bottom:1px solid #65708d;overflow:hidden}
+.candles{display:flex;align-items:end;justify-content:center;gap:10px;height:100%}
+.candles span{width:10px;background:#75dfa1;display:block}
+.candles span:nth-child(1){height:35px}.candles span:nth-child(2){height:55px}.candles span:nth-child(3){height:45px}.candles span:nth-child(4){height:80px}.candles span:nth-child(5){height:65px}.candles span:nth-child(6){height:105px}.candles span:nth-child(7){height:125px}
+.line{position:absolute;width:130%;height:3px;background:#76e6a4;transform:rotate(-12deg);left:-10%;top:65%;box-shadow:0 0 12px rgba(118,230,164,.6)}
+.line2{position:absolute;width:110%;height:3px;background:#f1d06f;transform:rotate(18deg);left:5%;top:42%}
+.dua{font-size:19px;color:#f3dfa0;line-height:2;margin:20px 0}
+.message{border-left:3px solid #e0bd63;padding:15px 18px;text-align:left;background:rgba(255,255,255,.04);border-radius:10px;margin-top:20px}
+.signature{margin-top:30px;font-size:22px;color:#f4d985}
+.progress{position:fixed;bottom:13px;left:50%;transform:translateX(-50%);z-index:5;display:flex;gap:7px}
+.dot{width:7px;height:7px;border-radius:50%;background:#555c70}.dot.active{background:#f0d57f;box-shadow:0 0 8px #f0d57f}
+.confetti{position:fixed;width:8px;height:8px;top:-10px;z-index:10;animation:fall 3s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+</style>
+</head>
+<body>
+<div id="stars"></div>
+
+<section class="screen active"><div class="card">
+<div class="moon"></div><div class="small">Assalamu Alaikum 🤍</div>
+<h1>For</h1><div class="name">Madihaa</div>
+<p>I made something small for you...<br>Just a little birthday surprise 🌙✨</p>
+<button onclick="nextScreen()">Open Your Gift 🎁</button>
+</div></section>
+
+<section class="screen"><div class="card">
+<div class="candle">🎂</div><h2>Happy Birthday, Madihaa! 🤍</h2>
+<p id="typing"></p><button onclick="nextScreen()">Continue ✨</button>
+</div></section>
+
+<section class="screen"><div class="card">
+<h2>For Your Trading Journey 📈</h2>
+<div class="chart"><div class="candles"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="line"></div><div class="line2"></div></div>
+<p>You're just beginning your Forex journey.<br><br>Every experienced trader was once a beginner too. 📈</p>
+<p style="margin-top:15px">Learn patiently. Protect your capital. Stay disciplined. Keep improving.</p>
+<button onclick="nextScreen()">A Little Dua 🤲</button>
+</div></section>
+
+<section class="screen"><div class="card">
+<div style="font-size:45px">🌙</div><h2>A Little Dua For You 🤲</h2>
+<div class="dua">May Allah bless your life with peace, happiness and barakah.<br><br>May Allah guide you towards everything that is good for you.<br><br>May your dreams become beautiful realities.</div>
+<p>May every new chapter of your life bring you closer to the person you want to become. 🤍</p>
+<button onclick="nextScreen()">For Someone You Miss 🕊️</button>
+</div></section>
+
+<section class="screen"><div class="card">
+<div style="font-size:45px">🕊️</div><h2>For Someone You Miss 🤍</h2>
+<div class="message"><p>I know there is someone very special whose absence can never truly be replaced.<br><br>Your mother.<br><br>I may never completely understand the pain of losing her, but I hope you always carry the beautiful memories she left behind.<br><br>May Allah grant her Jannatul Firdaus and give you strength, peace and sabr. 🤲<br><br>Whenever life feels heavy, I hope you remember that you are stronger than you think.</p></div>
+<button onclick="nextScreen()">Continue 🤍</button>
+</div></section>
+
+<section class="screen"><div class="card">
+<div class="heart">🤍</div><h2>And... I'm Sorry</h2>
+<div class="message"><p>I also wanted to say sorry for the way I spoke last night.<br><br>I feel like I talked a little too much and crossed a line.<br><br>I genuinely didn't mean to make you uncomfortable or upset.<br><br>I'm really sorry, Madihaa. 🤍</p></div>
+<button onclick="nextScreen()">One Last Thing...</button>
+</div></section>
+
+<section class="screen"><div class="card">
+<div style="font-size:45px">🫂</div><h2>Your Journey Isn't Over</h2>
+<p>I don't know where life will take either of us.<br><br>But as long as we're friends, I'll always wish to see you succeed.<br><br>I'll cheer for your small wins, remind you to keep going when you feel like giving up, and be genuinely happy when you reach the success you've been working for.<br><br><strong>Until you see the success you're dreaming of, I'll keep believing in you. 🤍📈</strong></p>
+<button onclick="nextScreen()">Final Surprise ✨</button>
+</div></section>
+
+<section class="screen"><div class="card">
+<div class="moon"></div><h2>Happy Birthday Again, Madihaa 🎂🤍</h2>
+<p>Your birthday may have passed, but a good wish never expires.<br><br>Keep your faith.<br>Keep your dreams.<br>Keep learning.<br>Keep going. ✨</p>
+<br><p>May Allah bless your journey. 🌙🤲</p>
+<div class="signature">With best wishes,<br><strong>Akhil</strong> 🤍</div>
+<button onclick="celebrate()">✨ One Last Surprise</button>
+</div></section>
+
+<div class="progress">
+<span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+<span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+
+<script>
+const screens=document.querySelectorAll(".screen");
+const dots=document.querySelectorAll(".dot");
+let current=0;
+
+function nextScreen(){
+  if(current<screens.length-1){
+    screens[current].classList.remove("active");
+    current++;
+    screens[current].classList.add("active");
+    dots.forEach((dot,index)=>dot.classList.toggle("active",index===current));
+    if(current===1) typeMessage();
+  }
+}
+
+function typeMessage(){
+  const text="Your birthday may have already passed, but I still wanted to make you something special. You deserve a beautiful year ahead filled with happiness, peace and success. 🤍";
+  const element=document.getElementById("typing");
+  element.textContent="";
+  let i=0;
+  function type(){
+    if(i<text.length){
+      element.textContent+=text.charAt(i++);
+      setTimeout(type,35);
+    }
+  }
+  type();
+}
+
+const starContainer=document.getElementById("stars");
+for(let i=0;i<100;i++){
+  const star=document.createElement("div");
+  star.className="star";
+  star.style.left=Math.random()*100+"%";
+  star.style.top=Math.random()*100+"%";
+  star.style.animationDelay=Math.random()*2+"s";
+  star.style.opacity=Math.random();
+  starContainer.appendChild(star);
+}
+
+function celebrate(){
+  for(let i=0;i<100;i++){
+    const confetti=document.createElement("div");
+    confetti.className="confetti";
+    confetti.style.left=Math.random()*100+"vw";
+    confetti.style.animationDuration=(2+Math.random()*3)+"s";
+    confetti.style.background=["#f4d985","#ffffff","#d8c2ff","#8ee8b0"][Math.floor(Math.random()*4)];
+    document.body.appendChild(confetti);
+    setTimeout(()=>confetti.remove(),5000);
+  }
+}
+</script>
+</body>
+</html>
